@@ -1,26 +1,43 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply text-white scroll-smooth font-merri bg-[#101010] 
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.custom-img{
+  background-image: url('../public/assets/HeroImage.png');
 }
 
-* {
-  box-sizing: border-box;
+.radial-gradient{
+  background: radial-gradient(104.75% 126.59% at 51.67% 35.45%, rgb(152, 23, 112) 2.7%, #000000 62.38%);
+  z-index: -1;
+  opacity: 0.4;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.blur-backdrop-filter{
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.card-bg{
+  background: 
+  linear-gradient(59.7deg, #000000 -33.42%, rgba(0, 0, 0, 0) 68.69%), 
+  linear-gradient(304.35deg, #FD8AF1 7.92%, #A61A7A 94.78%), 
+  linear-gradient(59.7deg, #000000 33.42%, rgba(0, 0, 0, 0) 68.69%), 
+  linear-gradient(304.35deg, #7CF8AE 7.92%, #5978D7 94.78%);
+}
+.card-bg-test{
+  background: rgb(114,37,94);
+  background: -moz-linear-gradient(120deg, rgba(114,37,94,1) 0%, rgba(170,70,149,1) 75%, rgba(196,120,188,1) 100%);
+  background: -webkit-linear-gradient(120deg, rgba(114,37,94,1) 0%, rgba(170,70,149,1) 75%, rgba(196,120,188,1) 100%);
+  background: linear-gradient(120deg, rgba(114,37,94,1) 0%, rgba(170,70,149,1) 75%, rgba(196,120,188,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#72255e",endColorstr="#c478bc",GradientType=1); 
+}
+
+.listImage{
+  list-style-image: url('../public/assets/Tik.svg');
 }
